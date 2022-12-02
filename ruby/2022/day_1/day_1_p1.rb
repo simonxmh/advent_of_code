@@ -4,11 +4,11 @@
 input_file = File.expand_path("../day_1_input.txt", __FILE__)
 input = File.read(input_file)
 
+#start of solution
 local_calories = 0
 max_carried_calories = 0
 
 calories = input.split("\n").map(&:to_i)
-
 
 calories.each_with_index do |x,i|
     if x == 0 
