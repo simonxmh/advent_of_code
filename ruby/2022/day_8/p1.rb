@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'set'
-
 # load input files
 input_file = File.expand_path("../input.txt", __FILE__)
 input = File.read(input_file)
@@ -26,7 +24,6 @@ arr.each_with_index do |line, y|
     end    
 end
 
-
 # from right to left
 arr.each_with_index do |line, y|
     max = -1
@@ -40,9 +37,7 @@ arr.each_with_index do |line, y|
     end    
 end
 
-
 # from top to bottom
-
 arr.transpose.each_with_index do |line, x|
     max = -1
     line.each_with_index do |elem, y|
@@ -56,7 +51,6 @@ arr.transpose.each_with_index do |line, x|
 end
 
 # from bottom to top
-
 arr.transpose.each_with_index do |line, x|
     max = -1
     line.reverse.each_with_index do |elem, y|
