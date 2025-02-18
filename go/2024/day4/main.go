@@ -23,7 +23,7 @@ var directions = [][2]int{
 
 func main() {
 	if len(os.Args) != 2 {
-		log.Fatal("Usage: d3 [filepath]")
+		log.Fatal("error with filepath")
 	}
 
 	f := get(os.Open(os.Args[1]))

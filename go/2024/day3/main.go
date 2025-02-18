@@ -16,7 +16,7 @@ func get[T any](v T, err error) T {
 
 func main() {
 	if len(os.Args) != 2 {
-		log.Fatal("Usage: d3 [filepath]")
+		log.Fatal("error with filepath")
 	}
 
 	cont := string(get(os.ReadFile(os.Args[1])))
