@@ -61,6 +61,7 @@ func walk(graph [][]rune, visited [][]bool, r, c, dr, dc, ind int) int {
 	if ind == 3 {
 		return 1
 	}
+	visited[r][c] = true
 	total := 0
 	for _, d := range directions {
 		newDr, newDc := d[0], d[1]
@@ -68,5 +69,6 @@ func walk(graph [][]rune, visited [][]bool, r, c, dr, dc, ind int) int {
 			total += walk(graph, visited, r+newDr, c+newDc, newDr, newDc, ind+1)
 		}
 	}
+	visited[r][c] = false
 	return total
 }
