@@ -79,11 +79,10 @@ func isSafe(report []int) bool {
 
 func isDampenedSafe(report []int) bool {
 	for i := range report {
-		removed := append([]int{}, report[:i]...)
+		removed := make([]int, 0, len(report)-1)
+		removed = append(removed, report[:i]...)
 		removed = append(removed, report[i+1:]...)
 		if isSafe(removed) {
-
-			fmt.Println(removed)
 			return true
 		}
 	}
